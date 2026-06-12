@@ -1,43 +1,108 @@
-#AI-工程工具包
-AI原生开发学习、大模型应用落地、智能编程工具实践 | 分享AI提效、Agent开发、低代码智能化方案
-#仓库元数据
+# AI-Engineering-Toolkit
 
-## AI-Engineering-Toolkit
+> Production-oriented toolkit, templates, and engineering playbooks for building reliable LLM applications.
 
-描述：
-面向生产环境的 AI Engineering Toolkit，覆盖评测、RAG、提示词管理、观测与交付流程。
+> 中文简介：面向生产环境的 AI 工程工具箱，聚焦评测、RAG、PromptOps、可观测性与交付流程。
 
-主题：
-`ai-engineering`, `llmops`, `rag`, `evaluation`, `prompt-engineering`, `observability`, `guardrails`, `production-ai`
+`AI-Engineering-Toolkit` is a working collection of practical assets for AI product delivery. The focus is not on toy demos, but on the engineering decisions required to move from prototype to production: evaluation, prompt operations, retrieval quality, observability, guardrails, and release discipline.
 
-##智能体工作流示例
+## What This Repository Covers
 
-描述：
-面向真实业务场景的 Agent 工作流示例库，沉淀规划、工具调用、多代理协作与审批链路。
+- AI application architecture patterns
+- Prompt lifecycle management and version control practices
+- RAG design notes, retrieval diagnostics, and failure analysis
+- Evaluation frameworks for quality, latency, cost, and safety
+- Monitoring, tracing, and operational checklists for production systems
+- Delivery templates for internal tools, copilots, and customer-facing AI features
 
-主题：
-`人工智能代理`, `代理工作流`, `多智能体`, `工具调用`, `编排`, `人机协作`, `工作流自动化`
+## Core Focus Areas
 
-##大语言模型API封装工具
+### 1. Evaluation First
 
-描述：
-统一封装多模型 API 的调用模式，关注鉴权、重试、流式输出、函数调用与可观测性。
+Reliable AI systems are built on measurable behavior. This repository prioritizes:
 
-主题：
-`llm-api`, `sdk`, `openai`, `anthropic`, `api-wrapper`, `tool-calling`, `streaming`, `developer-tools`
+- task-specific benchmark design
+- golden test set organization
+- regression review workflows
+- human evaluation rubrics
+- latency and cost tradeoff tracking
 
-##PromptCraft工具集
+### 2. PromptOps
 
-描述：
-提示词工程工具与模板集合，包含提示词资产管理、评审规则、测试集与迭代方法论。
+Prompt changes should be treated as controlled engineering changes rather than ad hoc edits. The repository is structured to support:
 
-主题：
-`提示工程`, `提示词`, `提示库`, `提示测试`, `评估`, `大模型提示词`, `人工智能写作`
+- prompt versioning
+- prompt review checklists
+- release notes for prompt updates
+- rollback and comparison workflows
 
-##IDE人工智能插件集合
+### 3. RAG and Knowledge Grounding
 
-描述：
-主流 IDE AI 插件与开发增强工具清单，包含能力对比、配置建议与团队接入实践。
+For retrieval-based systems, accuracy depends on more than vector search alone. The recommended materials in this repository focus on:
 
-主题：
-`ai-coding`, `developer-tools`, `ide`, `github-copilot`, `cursor`, `continue`, `productivity`, `engineering-workflow`
+- chunking strategy selection
+- retrieval diagnostics
+- citation quality checks
+- context window budgeting
+- grounding failure patterns
+
+### 4. Production Readiness
+
+The repository also documents the non-demo parts of AI delivery:
+
+- observability and tracing
+- abuse and safety guardrails
+- incident review checklists
+- operational handoff standards
+- environment and release documentation
+
+## Recommended Repository Layout
+
+```text
+.
+├─ docs/
+│  ├─ architecture/
+│  ├─ evaluation/
+│  ├─ rag/
+│  ├─ observability/
+│  └─ operations/
+├─ templates/
+│  ├─ prompt-release-notes/
+│  ├─ eval-scorecards/
+│  └─ launch-checklists/
+├─ examples/
+│  ├─ internal-copilot/
+│  ├─ knowledge-assistant/
+│  └─ support-automation/
+└─ assets/
+   ├─ diagrams/
+   └─ reference-materials/
+```
+
+## Typical Use Cases
+
+- Building an internal AI assistant with measurable quality gates
+- Standardizing the delivery workflow for LLM-based product features
+- Creating reusable engineering checklists for AI teams
+- Converting scattered experimentation into a maintainable knowledge base
+
+## Engineering Principles
+
+- Prefer explicit evaluation over intuition
+- Treat prompts as versioned assets
+- Design for observability from the start
+- Keep abstractions thin and operationally understandable
+- Optimize for maintainability, not demo velocity
+
+## Roadmap
+
+- [ ] Add evaluation scorecard templates for multi-step AI tasks
+- [ ] Add RAG troubleshooting playbook with common failure signatures
+- [ ] Add prompt release checklist for production deployments
+- [ ] Add observability baseline for latency, cost, and answer quality
+- [ ] Add architecture notes for human-in-the-loop approval flows
+
+## Positioning
+
+This repository is intended to represent a professional AI engineering practice: practical, measurable, and delivery-oriented.
+
